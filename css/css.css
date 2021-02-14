@@ -87,10 +87,30 @@ h2{
     display: grid;
     grid-template-columns: auto auto;
     justify-content: space-around;
-    background-color: rgb(44, 202, 23);
+    background-color: #fa6b37;
     vertical-align: middle;
 }
+.features{
+    padding: 30px 0px;
+    text-align: center;
+}
+.features-grid{
+    display: grid;
+    grid-template-columns: auto auto auto;
+
+}
+
+.features-item{
+    width: 350px;
+    height: max-content;
+}
+.features-grid a{
+    text-decoration: none;
+    color: black;
+}
 .gallery{
+    padding: 30px 0px;
+    text-align: center;
     background-color: #2a2a2a;
 }
 .gallery-grid{
