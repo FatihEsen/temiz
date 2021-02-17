@@ -33,7 +33,7 @@ header{
   }
   
   .logo img{
-      width: 50%;
+      width: 30%;
   }
   .main-nav li {
     text-align: center;
@@ -60,11 +60,9 @@ header{
     display: block;
   }
   
- 
-  
 .intro {
     position: absolute;
-    bottom: 10%;
+    top: 10%;
     width: 100%;
     text-align: center;
     z-index: 2;
@@ -265,7 +263,10 @@ footer{
         .logo {
           margin-top: 0;
         }
-      
+        .logo img{
+            width: 50%;
+        }
+
         .navbar-toggle {
           display: none;
         }
