@@ -12,72 +12,6 @@
     <style>
         @import "https://fonts.googleapis.com/css?family=Montserrat:300,400,700";
 
-        .rwd-table {
-            margin: 1em 0;
-            min-width: 300px;
-            width: 680px;
-            text-transform: capitalize;
-
-        }
-
-        .rwd-table tr {
-            border-top: 1px solid #ddd;
-            border-bottom: 1px solid #ddd;
-        }
-
-        .rwd-table th {
-            display: none;
-        }
-
-        .rwd-table td {
-            display: block;
-        }
-
-        .rwd-table td:first-child {
-            padding-top: .5em;
-        }
-
-        .rwd-table td:last-child {
-            padding-bottom: .5em;
-        }
-
-        .rwd-table td:before {
-            content: attr(data-th) ": ";
-            font-weight: bold;
-            width: 6.5em;
-            display: inline-block;
-        }
-
-        @media (min-width: 480px) {
-            .rwd-table td:before {
-                display: none;
-            }
-        }
-
-        .rwd-table th,
-        .rwd-table td {
-            text-align: left;
-        }
-
-        @media (min-width: 480px) {
-
-            .rwd-table th,
-            .rwd-table td {
-                display: table-cell;
-                padding: .25em .5em;
-            }
-
-            .rwd-table th:first-child,
-            .rwd-table td:first-child {
-                padding-left: 0;
-            }
-
-            .rwd-table th:last-child,
-            .rwd-table td:last-child {
-                padding-right: 0;
-            }
-        }
-
         body {
             padding: 0 2em;
             font-family: Montserrat, sans-serif;
@@ -87,42 +21,79 @@
             background: #eee;
         }
 
-        h1 {
-            font-weight: normal;
-            letter-spacing: -1px;
-            color: #34495E;
-        }
-
-        .rwd-table {
+        .tablo {
             background: #34495E;
             color: #fff;
             border-radius: .4em;
             overflow: hidden;
+            margin: 1em 0;
+            min-width: 300px;
+            width: 680px;
+            text-transform: capitalize;
         }
 
-        .rwd-table tr {
-            border-color: #46637f;
-        }
-
-        .rwd-table th,
-        .rwd-table td {
+        .tablo th,
+        .tablo td {
             margin: .5em 1em;
         }
 
-        @media (min-width: 480px) {
+        .tablo tr:nth-child(even) {
+            background: rgb(18, 18, 24);
+        }
 
-            .rwd-table th,
-            .rwd-table td {
+        .tablo th {
+            display: none;
+        }
+
+        .tablo td {
+            display: block;
+        }
+
+        .tablo td:first-child {
+            padding-top: .5em;
+        }
+
+        .tablo td:last-child {
+            padding-bottom: .5em;
+        }
+
+        .tablo td:before {
+            content: attr(data-th) ": ";
+            font-weight: bold;
+            width: 6.5em;
+            display: inline-block;
+        }
+
+        @media (min-width: 480px) {
+            .tablo td:before {
+                display: none;
+            }
+
+            .tablo th,
+            .tablo td {
+                text-align: left;
                 padding: 1em !important;
+                display: table-cell;
+            }
+
+            .tablo th:first-child,
+            .tablo td:first-child {
+                padding-left: 0;
+            }
+
+            .tablo th:last-child,
+            .tablo td:last-child {
+                padding-right: 0;
             }
         }
 
-        .rwd-table th,
-        .rwd-table td:before {
+        .tablo th,
+        .tablo td:before {
             color: #dd5;
         }
+        }
     </style>
-    <table class="rwd-table">
+    <table class="tablo">
         <tbody>
             <tr>
                 <th>Latin</th>
@@ -230,11 +201,11 @@
                 <td data-th="Türkçe ">onüç</td>
             </tr>
             <tr>
-                <td cdata-th="Latin ">14</td>
-                <td cdata-th="Fars ">۱۴</td>
-                <td cdata-th="Yazılış ">چهارده</td>
-                <td cdata-th="Okunuş ">çehardeh çaharda</td>
-                <td cdata-th="Türkçe ">ondört</td>
+                <td data-th="Latin ">14</td>
+                <td data-th="Fars ">۱۴</td>
+                <td data-th="Yazılış ">چهارده</td>
+                <td data-th="Okunuş ">çehardeh çaharda</td>
+                <td data-th="Türkçe ">ondört</td>
             </tr>
             <tr>
                 <td data-th="Latin ">15</td>
@@ -363,11 +334,11 @@
                 <td data-th="Türkçe ">bin</td>
             </tr>
             <tr>
-                <td cdata-th="Latin ">1.000.000</td>
-                <td cdata-th="Fars ">۱۰۰۰۰۰۰</td>
-                <td cdata-th="Yazılış ">میلیون</td>
-                <td cdata-th="Okunuş ">melyun</td>
-                <td cdata-th="Türkçe ">milyon</td>
+                <td data-th="Latin ">1.000.000</td>
+                <td data-th="Fars ">۱۰۰۰۰۰۰</td>
+                <td data-th="Yazılış ">میلیون</td>
+                <td data-th="Okunuş ">melyun</td>
+                <td data-th="Türkçe ">milyon</td>
             </tr>
         </tbody>
     </table>
