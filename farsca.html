@@ -1,303 +1,376 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Farsça Sayılar</title>
 </head>
+
 <body>
     <style>
-        *{
+        @import "https://fonts.googleapis.com/css?family=Montserrat:300,400,700";
+
+        .rwd-table {
+            margin: 1em 0;
+            min-width: 300px;
+            width: 680px;
             text-transform: capitalize;
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
+
         }
-        td{
-            padding: 5px 20px;
+
+        .rwd-table tr {
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
         }
-    
-    
+
+        .rwd-table th {
+            display: none;
+        }
+
+        .rwd-table td {
+            display: block;
+        }
+
+        .rwd-table td:first-child {
+            padding-top: .5em;
+        }
+
+        .rwd-table td:last-child {
+            padding-bottom: .5em;
+        }
+
+        .rwd-table td:before {
+            content: attr(data-th) ": ";
+            font-weight: bold;
+            width: 6.5em;
+            display: inline-block;
+        }
+
+        @media (min-width: 480px) {
+            .rwd-table td:before {
+                display: none;
+            }
+        }
+
+        .rwd-table th,
+        .rwd-table td {
+            text-align: left;
+        }
+
+        @media (min-width: 480px) {
+
+            .rwd-table th,
+            .rwd-table td {
+                display: table-cell;
+                padding: .25em .5em;
+            }
+
+            .rwd-table th:first-child,
+            .rwd-table td:first-child {
+                padding-left: 0;
+            }
+
+            .rwd-table th:last-child,
+            .rwd-table td:last-child {
+                padding-right: 0;
+            }
+        }
+
+        body {
+            padding: 0 2em;
+            font-family: Montserrat, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+            color: #444;
+            background: #eee;
+        }
+
+        h1 {
+            font-weight: normal;
+            letter-spacing: -1px;
+            color: #34495E;
+        }
+
+        .rwd-table {
+            background: #34495E;
+            color: #fff;
+            border-radius: .4em;
+            overflow: hidden;
+        }
+
+        .rwd-table tr {
+            border-color: #46637f;
+        }
+
+        .rwd-table th,
+        .rwd-table td {
+            margin: .5em 1em;
+        }
+
+        @media (min-width: 480px) {
+
+            .rwd-table th,
+            .rwd-table td {
+                padding: 1em !important;
+            }
+        }
+
+        .rwd-table th,
+        .rwd-table td:before {
+            color: #dd5;
+        }
     </style>
-    <div class="ritz grid-container" dir="ltr">
-        <table class="waffle" cellspacing="0" cellpadding="0">
-            <tbody>
-                <tr style="height: 20px">
-                    <th id="58866508R0" style="height: 20px;" class="row-headers-background"></th>
-                    <td class="s0" dir="ltr">0</td>
-                    <td class="s0" dir="ltr">۰</td>
-                    <td class="s1" dir="ltr">صفر</td>
-                    <td class="s0" dir="ltr">sefr</td>
-                    <td class="s0" dir="ltr">sıfır</td>
-                </tr>
-                <tr style="height: 20px">
-                    <th id="58866508R1" style="height: 20px;" class="row-headers-background"></th>
-                    <td class="s0" dir="ltr">1</td>
-                    <td class="s0" dir="ltr">۱</td>
-                    <td class="s0" dir="ltr">يك</td>
-                    <td class="s0" dir="ltr">yek</td>
-                    <td class="s0" dir="ltr">bir</td>
-                </tr>
-                <tr style="height: 20px">
-                    <th id="58866508R2" style="height: 20px;" class="row-headers-background"></th>
-                    <td class="s0" dir="ltr">2</td>
-                    <td class="s0" dir="ltr">۲</td>
-                    <td class="s0" dir="ltr">دو</td>
-                    <td class="s0" dir="ltr">do</td>
-                    <td class="s0" dir="ltr">iki</td>
-                </tr>
-                <tr style="height: 20px">
-                    <th id="58866508R3" style="height: 20px;" class="row-headers-background"></th>
-                    <td class="s0" dir="ltr">3</td>
-                    <td class="s0" dir="ltr">۳</td>
-                    <td class="s0" dir="ltr">سه</td>
-                    <td class="s0" dir="ltr">se</td>
-                    <td class="s0" dir="ltr">üç</td>
-                </tr>
-                <tr style="height: 20px">
-                    <th id="58866508R4" style="height: 20px;" class="row-headers-background"></th>
-                    <td class="s0" dir="ltr">4</td>
-                    <td class="s0" dir="ltr">۴</td>
-                    <td class="s0" dir="ltr">چهار</td>
-                    <td class="s0" dir="ltr">çahar çehar</td>
-                    <td class="s0" dir="ltr">dört</td>
-                </tr>
-                <tr style="height: 20px">
-                    <th id="58866508R5" style="height: 20px;" class="row-headers-background"></th>
-                    <td class="s0" dir="ltr">5</td>
-                    <td class="s0" dir="ltr">۵</td>
-                    <td class="s0" dir="ltr">پنج</td>
-                    <td class="s0" dir="ltr">panc penc</td>
-                    <td class="s0" dir="ltr">beş</td>
-                </tr>
-                <tr style="height: 20px">
-                    <th id="58866508R6" style="height: 20px;" class="row-headers-background"></th>
-                    <td class="s0" dir="ltr">6</td>
-                    <td class="s0" dir="ltr">۶</td>
-                    <td class="s0" dir="ltr">شش</td>
-                    <td class="s0" dir="ltr">şeş</td>
-                    <td class="s0" dir="ltr">altı</td>
-                </tr>
-                <tr style="height: 20px">
-                    <th id="58866508R7" style="height: 20px;" class="row-headers-background"></th>
-                    <td class="s0" dir="ltr">7</td>
-                    <td class="s0" dir="ltr">۷</td>
-                    <td class="s1" dir="ltr">هفت</td>
-                    <td class="s0" dir="ltr">haft heft</td>
-                    <td class="s0" dir="ltr">yedi</td>
-                </tr>
-                <tr style="height: 20px">
-                    <th id="58866508R8" style="height: 20px;" class="row-headers-background"></th>
-                    <td class="s0" dir="ltr">8</td>
-                    <td class="s0" dir="ltr">۸</td>
-                    <td class="s0" dir="ltr">هشت</td>
-                    <td class="s0" dir="ltr">haşt heşt</td>
-                    <td class="s0" dir="ltr">sekiz</td>
-                </tr>
-                <tr style="height: 20px">
-                    <th id="58866508R9" style="height: 20px;" class="row-headers-background"> </th>
-                    <td class="s0" dir="ltr">9</td>
-                    <td class="s0" dir="ltr">۹</td>
-                    <td class="s0" dir="ltr">نه</td>
-                    <td class="s0" dir="ltr">noh</td>
-                    <td class="s0" dir="ltr">dokuz</td>
-                </tr>
-                <tr style="height: 20px">
-                    <th id="58866508R10" style="height: 20px;" class="row-headers-background"> </th>
-                    <td class="s0" dir="ltr">10</td>
-                    <td class="s0" dir="ltr">۱۰</td>
-                    <td class="s0" dir="ltr">ده</td>
-                    <td class="s0" dir="ltr">da deh</td>
-                    <td class="s0" dir="ltr">on</td>
-                </tr>
-                <tr style="height: 20px">
-                    <th id="58866508R11" style="height: 20px;" class="row-headers-background"> </th>
-                    <td class="s0" dir="ltr">11</td>
-                    <td class="s0" dir="ltr">۱۱</td>
-                    <td class="s0" dir="ltr">يازده</td>
-                    <td class="s0" dir="ltr">yazda yazdeh</td>
-                    <td class="s0" dir="ltr">onbir</td>
-                </tr>
-                <tr style="height: 20px">
-                    <th id="58866508R12" style="height: 20px;" class="row-headers-background"> </th>
-                    <td class="s0" dir="ltr">12</td>
-                    <td class="s0" dir="ltr">۱۲</td>
-                    <td class="s0" dir="ltr">دوازده</td>
-                    <td class="s0" dir="ltr">davazde devazdeh</td>
-                    <td class="s0" dir="ltr">oniki</td>
-                </tr>
-                <tr style="height: 20px">
-                    <th id="58866508R13" style="height: 20px;" class="row-headers-background"> </th>
-                    <td class="s0" dir="ltr">13</td>
-                    <td class="s0" dir="ltr">۱۳</td>
-                    <td class="s0" dir="ltr">سيزده</td>
-                    <td class="s0" dir="ltr">sizdeh sizda</td>
-                    <td class="s0" dir="ltr">onüç</td>
-                </tr>
-                <tr style="height: 20px">
-                    <th id="58866508R14" style="height: 20px;" class="row-headers-background"> </th>
-                    <td class="s0" dir="ltr">14</td>
-                    <td class="s0" dir="ltr">۱۴</td>
-                    <td class="s0" dir="ltr">چهارده</td>
-                    <td class="s0" dir="ltr">çehardeh çaharda</td>
-                    <td class="s0" dir="ltr">ondört</td>
-                </tr>
-                <tr style="height: 20px">
-                    <th id="58866508R15" style="height: 20px;" class="row-headers-background"> </th>
-                    <td class="s0" dir="ltr">15</td>
-                    <td class="s0" dir="ltr">۱۵</td>
-                    <td class="s0" dir="ltr">پانزده</td>
-                    <td class="s0" dir="ltr">panzda panuzdeh</td>
-                    <td class="s0" dir="ltr">onbeş</td>
-                </tr>
-                <tr style="height: 20px">
-                    <th id="58866508R16" style="height: 20px;" class="row-headers-background"> </th>
-                    <td class="s0" dir="ltr">16</td>
-                    <td class="s0" dir="ltr">۱۶</td>
-                    <td class="s0" dir="ltr">شانزده</td>
-                    <td class="s0" dir="ltr">şanzda şanzdeh</td>
-                    <td class="s0" dir="ltr">onaltı</td>
-                </tr>
-                <tr style="height: 20px">
-                    <th id="58866508R17" style="height: 20px;" class="row-headers-background"> </th>
-                    <td class="s0" dir="ltr">17</td>
-                    <td class="s0" dir="ltr">۱۷</td>
-                    <td class="s0" dir="ltr">هفده</td>
-                    <td class="s0" dir="ltr">hefda hifdeh</td>
-                    <td class="s0" dir="ltr">onyedi</td>
-                </tr>
-                <tr style="height: 20px">
-                    <th id="58866508R18" style="height: 20px;" class="row-headers-background"> </th>
-                    <td class="s0" dir="ltr">18</td>
-                    <td class="s0" dir="ltr">۱۸</td>
-                    <td class="s0" dir="ltr">هجده</td>
-                    <td class="s0" dir="ltr">hecda hicdeh</td>
-                    <td class="s0" dir="ltr">onsekiz</td>
-                </tr>
-                <tr style="height: 20px">
-                    <th id="58866508R19" style="height: 20px;" class="row-headers-background"> </th>
-                    <td class="s0" dir="ltr">19</td>
-                    <td class="s0" dir="ltr">۱۹</td>
-                    <td class="s0" dir="ltr">نوزده</td>
-                    <td class="s0" dir="ltr">nuzdeh nuzde</td>
-                    <td class="s0" dir="ltr">ondokuz</td>
-                </tr>
-                <tr style="height: 20px">
-                    <th id="58866508R20" style="height: 20px;" class="row-headers-background"> </th>
-                    <td class="s0" dir="ltr">20</td>
-                    <td class="s0" dir="ltr">۲۰</td>
-                    <td class="s0" dir="ltr">بيست</td>
-                    <td class="s0" dir="ltr">bist</td>
-                    <td class="s0" dir="ltr">yirmi</td>
-                </tr>
-                <tr style="height: 20px">
-                    <th id="58866508R21" style="height: 20px;" class="row-headers-background"> </th>
-                    <td class="s0" dir="ltr">30</td>
-                    <td class="s0" dir="ltr">۳۰</td>
-                    <td class="s0" dir="ltr">سی</td>
-                    <td class="s0" dir="ltr">si</td>
-                    <td class="s0" dir="ltr">otuz</td>
-                </tr>
-                <tr style="height: 20px">
-                    <th id="58866508R22" style="height: 20px;" class="row-headers-background"> </th>
-                    <td class="s0" dir="ltr">40</td>
-                    <td class="s0" dir="ltr">۴۰</td>
-                    <td class="s0" dir="ltr">چهل</td>
-                    <td class="s0" dir="ltr">çehel</td>
-                    <td class="s0" dir="ltr">kırk</td>
-                </tr>
-                <tr style="height: 20px">
-                    <th id="58866508R23" style="height: 20px;" class="row-headers-background"> </th>
-                    <td class="s0" dir="ltr">50</td>
-                    <td class="s0" dir="ltr">۵۰</td>
-                    <td class="s0" dir="ltr">پنجاه</td>
-                    <td class="s0" dir="ltr">panca pencah</td>
-                    <td class="s0" dir="ltr">elli</td>
-                </tr>
-                <tr style="height: 20px">
-                    <th id="58866508R24" style="height: 20px;" class="row-headers-background"> </th>
-                    <td class="s0" dir="ltr">60</td>
-                    <td class="s0" dir="ltr">۶۰</td>
-                    <td class="s0" dir="ltr">شصت</td>
-                    <td class="s0" dir="ltr">şast şest</td>
-                    <td class="s0" dir="ltr">atmış</td>
-                </tr>
-                <tr style="height: 20px">
-                    <th id="58866508R25" style="height: 20px;" class="row-headers-background"> </th>
-                    <td class="s0" dir="ltr">70</td>
-                    <td class="s0" dir="ltr">۷۰</td>
-                    <td class="s0" dir="ltr">هفتاد</td>
-                    <td class="s0" dir="ltr">haftad heftad</td>
-                    <td class="s0" dir="ltr">yetmiş</td>
-                </tr>
-                <tr style="height: 20px">
-                    <th id="58866508R26" style="height: 20px;" class="row-headers-background"> </th>
-                    <td class="s0" dir="ltr">80</td>
-                    <td class="s0" dir="ltr">۸۰</td>
-                    <td class="s0" dir="ltr">هشتاد</td>
-                    <td class="s0" dir="ltr">haştad heştad</td>
-                    <td class="s0" dir="ltr">seksen</td>
-                </tr>
-                <tr style="height: 20px">
-                    <th id="58866508R27" style="height: 20px;" class="row-headers-background"> </th>
-                    <td class="s0" dir="ltr">90</td>
-                    <td class="s0" dir="ltr">۹۰</td>
-                    <td class="s0" dir="ltr">نود</td>
-                    <td class="s0" dir="ltr">navad neved</td>
-                    <td class="s0" dir="ltr">doksan</td>
-                </tr>
-                <tr style="height: 20px">
-                    <th id="58866508R28" style="height: 20px;" class="row-headers-background"> </th>
-                    <td class="s0" dir="ltr">100</td>
-                    <td class="s0" dir="ltr">۱۰۰</td>
-                    <td class="s0" dir="ltr">صد</td>
-                    <td class="s0" dir="ltr">sad sed</td>
-                    <td class="s0" dir="ltr">yüz</td>
-                </tr>
-                <tr style="height: 20px">
-                    <th id="58866508R29" style="height: 20px;" class="row-headers-background"> </th>
-                    <td class="s0" dir="ltr">200</td>
-                    <td class="s0" dir="ltr">۲۰۰</td>
-                    <td class="s0" dir="ltr">دويست</td>
-                    <td class="s0" dir="ltr">devīst divist</td>
-                    <td class="s0" dir="ltr">ikiyüz</td>
-                </tr>
-                <tr style="height: 22px">
-                    <th id="58866508R30" style="height: 22px;" class="row-headers-background">
-                    </th>
-                    <td class="s0" dir="ltr">300</td>
-                    <td class="s0" dir="ltr">۳۰۰</td>
-                    <td class="s0" dir="ltr">سيصد</td>
-                    <td class="s0" dir="ltr">sised</td>
-                    <td class="s0" dir="ltr">üçyüz</td>
-                </tr>
-                <tr style="height: 20px">
-                    <th id="58866508R31" style="height: 20px;" class="row-headers-background"> </th>
-                    <td class="s0" dir="ltr">900</td>
-                    <td class="s0" dir="ltr">۹۰۰</td>
-                    <td class="s1" dir="ltr">نهصد</td>
-                    <td class="s0" dir="ltr">nohsed</td>
-                    <td class="s0" dir="ltr">dokuzyüz</td>
-                </tr>
-                <tr style="height: 20px">
-                    <th id="58866508R32" style="height: 20px;" class="row-headers-background"> </th>
-                    <td class="s0" dir="ltr">1.000</td>
-                    <td class="s0" dir="ltr">۱۰۰۰</td>
-                    <td class="s0" dir="ltr">هزار</td>
-                    <td class="s0" dir="ltr">hezar</td>
-                    <td class="s0" dir="ltr">bin</td>
-                </tr>
-                <tr style="height: 20px">
-                    <th id="58866508R33" style="height: 20px;" class="row-headers-background"> </th>
-                    <td class="s0" dir="ltr">1.000.000</td>
-                    <td class="s0" dir="ltr">۱۰۰۰۰۰۰</td>
-                    <td class="s1" dir="ltr">میلیون</td>
-                    <td class="s0" dir="ltr">melyun</td>
-                    <td class="s0" dir="ltr">milyon</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+    <table class="rwd-table">
+        <tbody>
+            <tr>
+                <th>Latin</th>
+                <th>Fars</th>
+                <th>Yazılış</th>
+                <th>Okunuş</th>
+                <th>Türkçe</th>
+            </tr>
+            <tr>
+                <td data-th="Latin">0</td>
+                <td data-th="Fars">۰</td>
+                <td data-th="Yazılış">صفر</td>
+                <td data-th="Okunuş">sefr</td>
+                <td data-th="Türkçe">sıfır</td>
+            </tr>
+            <tr>
+                <td data-th="Latin">1</td>
+                <td data-th="Fars">۱</td>
+                <td data-th="Yazılış">يك</td>
+                <td data-th="Okunuş">yek</td>
+                <td data-th="Türkçe">bir</td>
+            </tr>
+            <tr>
+                <td data-th="Latin">2</td>
+                <td data-th="Fars">۲</td>
+                <td data-th="Yazılış">دو</td>
+                <td data-th="Okunuş">do</td>
+                <td data-th="Türkçe">iki</td>
+            </tr>
+            <tr>
+                <td data-th="Latin">3</td>
+                <td data-th="Fars">۳</td>
+                <td data-th="Yazılış">سه</td>
+                <td data-th="Okunuş">se</td>
+                <td data-th="Türkçe">üç</td>
+            </tr>
+            <tr>
+                <td data-th="Latin">4</td>
+                <td data-th="Fars">۴</td>
+                <td data-th="Yazılış">چهار</td>
+                <td data-th="Okunuş">çahar çehar</td>
+                <td data-th="Türkçe">dört</td>
+            </tr>
+            <tr>
+                <td data-th="Latin ">5</td>
+                <td data-th="Fars ">۵</td>
+                <td data-th="Yazılış ">پنج</td>
+                <td data-th="Okunuş ">panc penc</td>
+                <td data-th="Türkçe ">beş</td>
+            </tr>
+            <tr>
+                <td data-th="Latin ">6</td>
+                <td data-th="Fars ">۶</td>
+                <td data-th="Yazılış ">شش</td>
+                <td data-th="Okunuş ">şeş</td>
+                <td data-th="Türkçe ">altı</td>
+            </tr>
+            <tr>
+                <td data-th="Latin ">7</td>
+                <td data-th="Fars ">۷</td>
+                <td data-th="Yazılış ">هفت</td>
+                <td data-th="Okunuş ">haft heft</td>
+                <td data-th="Türkçe ">yedi</td>
+            </tr>
+            <tr>
+                <td data-th="Latin ">8</td>
+                <td data-th="Fars ">۸</td>
+                <td data-th="Yazılış ">هشت</td>
+                <td data-th="Okunuş ">haşt heşt</td>
+                <td data-th="Türkçe ">sekiz</td>
+            </tr>
+            <tr>
+                <td data-th="Latin ">9</td>
+                <td data-th="Fars ">۹</td>
+                <td data-th="Yazılış ">نه</td>
+                <td data-th="Okunuş ">noh</td>
+                <td data-th="Türkçe ">dokuz</td>
+            </tr>
+            <tr>
+                <td data-th="Latin ">10</td>
+                <td data-th="Fars ">۱۰</td>
+                <td data-th="Yazılış ">ده</td>
+                <td data-th="Okunuş ">da deh</td>
+                <td data-th="Türkçe ">on</td>
+            </tr>
+            <tr>
+                <td data-th="Latin ">11</td>
+                <td data-th="Fars ">۱۱</td>
+                <td data-th="Yazılış ">يازده</td>
+                <td data-th="Okunuş ">yazda yazdeh</td>
+                <td data-th="Türkçe ">onbir</td>
+            </tr>
+            <tr>
+                <td data-th="Latin ">12</td>
+                <td data-th="Fars ">۱۲</td>
+                <td data-th="Yazılış ">دوازده</td>
+                <td data-th="Okunuş ">davazde devazdeh</td>
+                <td data-th="Türkçe ">oniki</td>
+            </tr>
+            <tr>
+                <td data-th="Latin ">13</td>
+                <td data-th="Fars ">۱۳</td>
+                <td data-th="Yazılış ">سيزده</td>
+                <td data-th="Okunuş ">sizdeh sizda</td>
+                <td data-th="Türkçe ">onüç</td>
+            </tr>
+            <tr>
+                <td cdata-th="Latin ">14</td>
+                <td cdata-th="Fars ">۱۴</td>
+                <td cdata-th="Yazılış ">چهارده</td>
+                <td cdata-th="Okunuş ">çehardeh çaharda</td>
+                <td cdata-th="Türkçe ">ondört</td>
+            </tr>
+            <tr>
+                <td data-th="Latin ">15</td>
+                <td data-th="Fars ">۱۵</td>
+                <td data-th="Yazılış ">پانزده</td>
+                <td data-th="Okunuş ">panzda panuzdeh</td>
+                <td data-th="Türkçe ">onbeş</td>
+            </tr>
+            <tr>
+                <td data-th="Latin ">16</td>
+                <td data-th="Fars ">۱۶</td>
+                <td data-th="Yazılış ">شانزده</td>
+                <td data-th="Okunuş ">şanzda şanzdeh</td>
+                <td data-th="Türkçe ">onaltı</td>
+            </tr>
+            <tr>
+                <td data-th="Latin ">17</td>
+                <td data-th="Fars ">۱۷</td>
+                <td data-th="Yazılış ">هفده</td>
+                <td data-th="Okunuş ">hefda hifdeh</td>
+                <td data-th="Türkçe ">onyedi</td>
+            </tr>
+            <tr>
+                <td data-th="Latin ">18</td>
+                <td data-th="Fars ">۱۸</td>
+                <td data-th="Yazılış ">هجده</td>
+                <td data-th="Okunuş ">hecda hicdeh</td>
+                <td data-th="Türkçe ">onsekiz</td>
+            </tr>
+            <tr>
+                <td data-th="Latin ">19</td>
+                <td data-th="Fars ">۱۹</td>
+                <td data-th="Yazılış ">نوزده</td>
+                <td data-th="Okunuş ">nuzdeh nuzde</td>
+                <td data-th="Türkçe ">ondokuz</td>
+            </tr>
+            <tr>
+                <td data-th="Latin ">20</td>
+                <td data-th="Fars ">۲۰</td>
+                <td data-th="Yazılış ">بيست</td>
+                <td data-th="Okunuş ">bist</td>
+                <td data-th="Türkçe ">yirmi</td>
+            </tr>
+            <tr>
+                <td data-th="Latin ">30</td>
+                <td data-th="Fars ">۳۰</td>
+                <td data-th="Yazılış ">سی</td>
+                <td data-th="Okunuş ">si</td>
+                <td data-th="Türkçe ">otuz</td>
+            </tr>
+            <tr>
+                <td data-th="Latin ">40</td>
+                <td data-th="Fars ">۴۰</td>
+                <td data-th="Yazılış ">چهل</td>
+                <td data-th="Okunuş ">çehel</td>
+                <td data-th="Türkçe ">kırk</td>
+            </tr>
+            <tr>
+                <td data-th="Latin ">50</td>
+                <td data-th="Fars ">۵۰</td>
+                <td data-th="Yazılış ">پنجاه</td>
+                <td data-th="Okunuş ">panca pencah</td>
+                <td data-th="Türkçe ">elli</td>
+            </tr>
+            <tr>
+                <td data-th="Latin ">60</td>
+                <td data-th="Fars ">۶۰</td>
+                <td data-th="Yazılış ">شصت</td>
+                <td data-th="Okunuş ">şast şest</td>
+                <td data-th="Türkçe ">atmış</td>
+            </tr>
+            <tr>
+                <td data-th="Latin ">>70</td>
+                <td data-th="Fars ">>۷۰</td>
+                <td data-th="Yazılış ">>هفتاد</td>
+                <td data-th="Okunuş ">>haftad heftad</td>
+                <td data-th="Türkçe ">>yetmiş</td>
+            </tr>
+            <tr>
+                <td data-th="Latin ">80</td>
+                <td data-th="Fars ">۸۰</td>
+                <td data-th="Yazılış ">هشتاد</td>
+                <td data-th="Okunuş ">haştad heştad</td>
+                <td data-th="Türkçe ">seksen</td>
+            </tr>
+            <tr>
+                <td data-th="Latin ">90</td>
+                <td data-th="Fars ">۹۰</td>
+                <td data-th="Yazılış ">نود</td>
+                <td data-th="Okunuş ">navad neved</td>
+                <td data-th="Türkçe ">doksan</td>
+            </tr>
+            <tr>
+                <td data-th="Latin ">100</td>
+                <td data-th="Fars ">۱۰۰</td>
+                <td data-th="Yazılış ">صد</td>
+                <td data-th="Okunuş ">sad sed</td>
+                <td data-th="Türkçe ">yüz</td>
+            </tr>
+            <tr>
+                <td data-th="Latin ">200</td>
+                <td data-th="Fars ">۲۰۰</td>
+                <td data-th="Yazılış ">دويست</td>
+                <td data-th="Okunuş ">devīst divist</td>
+                <td data-th="Türkçe ">ikiyüz</td>
+            </tr>
+            <tr style="height: 22px">
+                <td data-th="Latin ">300</td>
+                <td data-th="Fars ">۳۰۰</td>
+                <td data-th="Yazılış ">سيصد</td>
+                <td data-th="Okunuş ">sised</td>
+                <td data-th="Türkçe ">üçyüz</td>
+            </tr>
+            <tr>
+                <td data-th="Latin ">900</td>
+                <td data-th="Fars ">۹۰۰</td>
+                <td data-th="Yazılış ">نهصد</td>
+                <td data-th="Okunuş ">nohsed</td>
+                <td data-th="Türkçe ">dokuzyüz</td>
+            </tr>
+            <tr>
+                <td data-th="Latin ">1.000</td>
+                <td data-th="Fars ">۱۰۰۰</td>
+                <td data-th="Yazılış ">هزار</td>
+                <td data-th="Okunuş ">hezar</td>
+                <td data-th="Türkçe ">bin</td>
+            </tr>
+            <tr>
+                <td cdata-th="Latin ">1.000.000</td>
+                <td cdata-th="Fars ">۱۰۰۰۰۰۰</td>
+                <td cdata-th="Yazılış ">میلیون</td>
+                <td cdata-th="Okunuş ">melyun</td>
+                <td cdata-th="Türkçe ">milyon</td>
+            </tr>
+        </tbody>
+    </table>
 </body>
+
 </html>
